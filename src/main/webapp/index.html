@@ -1,0 +1,281 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Logistic Cost Optimization System</title>
+
+    <link rel="stylesheet" href="style.css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <div class="brand">
+        <div class="brand-icon">L</div>
+        <div>
+          <h2>LogiTrack</h2>
+          <span>Management System</span>
+        </div>
+      </div>
+
+      <nav class="sidebar-nav">
+        <p class="nav-heading">MAIN MENU</p>
+
+        <a href="#dashboard" class="nav-link active">
+          <span>▦</span> Dashboard
+        </a>
+
+        <a href="#add-shipment" class="nav-link">
+          <span>＋</span> Add Shipment
+        </a>
+
+        <a href="#shipment-records" class="nav-link">
+          <span>▤</span> Shipment Records
+        </a>
+
+        <a href="#optimization" class="nav-link">
+          <span>↗</span> Cost Optimization
+        </a>
+      </nav>
+
+      <div class="sidebar-bottom">
+        <div class="sidebar-info">
+          <div class="info-icon">✓</div>
+          <div>
+            <strong>System Status</strong>
+            <p>Ready to manage shipments</p>
+          </div>
+        </div>
+        <p class="sidebar-footer">LogiTrack © 2026</p>
+      </div>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="main-content" id="dashboard">
+      <!-- Topbar -->
+      <header class="topbar">
+        <div>
+          <p class="breadcrumb">Pages / Dashboard</p>
+          <h1>Logistics Dashboard</h1>
+        </div>
+
+        <div class="topbar-right">
+          <div class="user-avatar">A</div>
+          <div class="user-details">
+            <strong>Administrator</strong>
+            <span>Logistics Manager</span>
+          </div>
+        </div>
+      </header>
+
+      <!-- Welcome Section -->
+      <section class="welcome-section">
+        <div>
+          <span class="welcome-tag">LOGISTICS MANAGEMENT</span>
+          <h2>Welcome to LogiTrack</h2>
+          <p>Manage shipments and find cost-effective transportation routes.</p>
+        </div>
+
+        <div class="welcome-icon">🚚</div>
+      </section>
+
+      <!-- Dashboard Cards -->
+      
+<section class="overview-grid">
+
+    <a href="#shipment-records" class="overview-card pink-card">
+        <div class="overview-top">
+            <span>Shipment Management</span>
+            <div class="overview-icon">▤</div>
+        </div>
+        <h2>Shipment Records</h2>
+        <p>View all registered shipments.</p>
+        <span class="card-link">View Records →</span>
+    </a>
+
+    <a href="#optimization" class="overview-card blue-card">
+        <div class="overview-top">
+            <span>Transportation</span>
+            <div class="overview-icon">↗</div>
+        </div>
+        <h2>Route Optimization</h2>
+        <p>Compare routes by estimated cost.</p>
+        <span class="card-link">Explore Routes →</span>
+    </a>
+
+    <a href="#add-shipment" class="overview-card grey-card">
+        <div class="overview-top">
+            <span>Shipment Registration</span>
+            <div class="overview-icon">＋</div>
+        </div>
+        <h2>Add New Shipment</h2>
+        <p>Register a new shipment easily.</p>
+        <span class="card-link">Add Shipment →</span>
+    </a>
+
+</section>
+
+        <div class="overview-card pink-card">
+          <div class="overview-top">
+            <span>Total Shipments</span>
+            <div class="overview-icon">▤</div>
+          </div>
+          <h2>Shipment Records</h2>
+          <p>View all registered shipments below.</p>
+        </div>
+
+        <div class="overview-card blue-card">
+          <div class="overview-top">
+            <span>Transportation</span>
+            <div class="overview-icon">↗</div>
+          </div>
+          <h2>Route Optimization</h2>
+          <p>Compare routes by estimated cost.</p>
+        </div>
+
+        <div class="overview-card grey-card">
+          <div class="overview-top">
+            <span>Shipment Tracking</span>
+            <div class="overview-icon">✓</div>
+          </div>
+          <h2>Status Management</h2>
+          <p>Monitor shipment progress.</p>
+        </div>
+      </section>
+
+      <!-- Add Shipment -->
+      <section class="content-card" id="add-shipment">
+        <div class="section-header">
+          <div>
+            <span class="section-label">SHIPMENT MANAGEMENT</span>
+            <h2>Add New Shipment</h2>
+            <p>Enter shipment details to register a new delivery.</p>
+          </div>
+
+          <div class="section-icon pink-icon">＋</div>
+        </div>
+
+        <form id="shipmentForm">
+          <div class="form-grid">
+            <div class="form-group">
+              <label for="source">Source City</label>
+              <input
+                type="text"
+                id="source"
+                placeholder="e.g. Ranchi"
+                required
+              />
+            </div>
+
+            <div class="form-group">
+              <label for="destination">Destination City</label>
+              <input
+                type="text"
+                id="destination"
+                placeholder="e.g. Patna"
+                required
+              />
+            </div>
+
+            <div class="form-group">
+              <label for="weight">Shipment Weight (kg)</label>
+              <input
+                type="number"
+                id="weight"
+                min="0.01"
+                step="0.01"
+                placeholder="Enter weight"
+                required
+              />
+            </div>
+
+            <div class="form-group">
+              <label for="shipmentDate">Shipment Date</label>
+              <input type="date" id="shipmentDate" required />
+            </div>
+          </div>
+
+          <div class="form-actions">
+            <button type="submit" class="primary-button">
+              <span>＋</span> Add Shipment
+            </button>
+          </div>
+        </form>
+
+        <p id="message"></p>
+      </section>
+
+      <!-- Shipment Records -->
+      <section class="content-card" id="shipment-records">
+        <div class="section-header records-header">
+          <div>
+            <span class="section-label">RECORD MANAGEMENT</span>
+            <h2>Shipment Records</h2>
+            <p>View and manage your registered shipments.</p>
+          </div>
+
+          <button onclick="loadShipments()" class="refresh-button">
+            ↻ Refresh Shipments
+          </button>
+        </div>
+
+        <div class="table-container">
+          <table>
+            <thead>
+              <tr>
+                <th>ID</th>
+                <th>Source</th>
+                <th>Destination</th>
+                <th>Weight (kg)</th>
+                <th>Date</th>
+                <th>Status</th>
+                <th>Action</th>
+              </tr>
+            </thead>
+
+            <tbody id="shipmentTable"></tbody>
+          </table>
+        </div>
+      </section>
+
+      <!-- Route Optimization -->
+      <section class="content-card optimization-card" id="optimization">
+        <div class="section-header">
+          <div>
+            <span class="section-label">SMART TRANSPORTATION</span>
+            <h2>Route Cost Optimization</h2>
+            <p>Find the most economical transportation route.</p>
+          </div>
+
+          <div class="section-icon blue-icon">↗</div>
+        </div>
+
+        <div id="optimizationResult" class="optimization-result">
+          <div class="empty-icon">⌖</div>
+          <h3>Ready to Optimize</h3>
+          <p>
+            Select a shipment and click Optimize Route to compare transportation
+            costs.
+          </p>
+        </div>
+      </section>
+
+      <!-- Footer -->
+      <footer class="main-footer">
+        <p>© 2026 LogiTrack | Logistic Cost Optimization System</p>
+        <span>Designed for smarter transportation management</span>
+      </footer>
+    </main>
+
+    <script src="js/script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,20 @@
+
+# Maven build files
+target/
+
+# IDE files
+.idea/
+.classpath
+.project
+.settings/
+
+# VS Code workspace settings
+.vscode/
+
+# Sensitive configuration
+.env
+*.properties.local
+
+# Operating system files
+.DS_Store
+Thumbs.db
